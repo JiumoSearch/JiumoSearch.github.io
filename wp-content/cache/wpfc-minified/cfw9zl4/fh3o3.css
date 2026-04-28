@@ -1,0 +1,68 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Segoe UI', 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif;
+background: #f8f9fa;
+color: #212529;
+line-height: 1.5;
+} a{color:#0d6efd;text-decoration:none;transition:color 0.2s;}
+a:hover{color:#0a58ca;text-decoration:underline;}
+.container{max-width:1200px;margin:0 auto;padding:0 16px;}
+.site-header{background:#ffffff;box-shadow:0 2px 8px rgba(0, 0, 0, 0.02);padding:0.8rem 0;border-bottom:1px solid #e9ecef;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.8rem;}
+.site-title{font-size:1.5rem;font-weight:700;color:#0b2b4a;line-height:1.2;}
+.site-title a{color:inherit;text-decoration:none;}
+.site-description{color:#6c757d;font-size:0.85rem;margin-top:0.15rem;}
+.main-nav ul{display:flex;list-style:none;gap:1.2rem;}
+.main-nav a{font-weight:500;color:#343a40;padding:0.3rem 0;font-size:0.95rem;border-bottom:2px solid transparent;}
+.main-nav a:hover{border-bottom-color:#0d6efd;text-decoration:none;}
+.site-main{padding:1.8rem 0;min-height:70vh;}
+.book-grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));gap:1.2rem;}
+.book-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.02);transition:transform 0.15s, box-shadow 0.15s;border:1px solid #f0f0f0;display:flex;flex-direction:column;}
+.book-card:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,0.04);border-color:#d4e0ff;}
+.card-img{#aspect-ratio:2/3;background:#f1f3f5;display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid #eee;}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.card-img .no-image{background:#dee2e6;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#6c757d;font-size:0.85rem;}
+.card-content{padding:0.9rem 0.8rem 1rem;flex:1;display:flex;flex-direction:column;}
+.card-title{font-size:1.1rem;font-weight:600;margin-bottom:0.3rem;line-height:1.3;}
+.card-title a{color:#1e293b;}
+.card-title a:hover{color:#0d6efd;}
+.book-author{color:#64748b;font-size:0.85rem;margin-bottom:0.5rem;}
+.card-excerpt{color:#475569;font-size:0.85rem;margin-bottom:0.7rem;flex:1;line-height:1.4;}
+.card-meta{font-size:0.75rem;color:#94a3b8;margin-top:auto;border-top:1px dashed #e2e8f0;padding-top:0.5rem;}
+.pagination{margin-top:2rem;text-align:center;}
+.pagination .page-numbers{display:inline-block;padding:0.3rem 0.7rem;margin:0 3px;background:#fff;border-radius:20px;border:1px solid #dee2e6;color:#495057;font-size:0.9rem;}
+.pagination .current{background:#0d6efd;border-color:#0d6efd;color:white;}
+.single-book{background:#fff;border-radius:16px;padding:1.5rem 1.8rem;box-shadow:0 4px 16px rgba(0,0,0,0.02);border:1px solid #f0f0f0;}
+.entry-header{text-align:center;margin-bottom:1.5rem;border-bottom:1px solid #ecf0f5;padding-bottom:0.8rem;}
+.entry-title{font-size:1.2rem;font-weight:700;color:#0b2b4a;margin-bottom:0.5rem;line-height:1.3;}
+.entry-meta{color:#6c757d;font-size:0.8rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;}
+.entry-content{font-size:0.9rem;line-height:2.2;}
+.entry-content img{max-width:100%;height:auto;border-radius:10px;margin:1.2rem 0;}
+.download-section{margin-top:2rem;padding:1.2rem 1.5rem;background:#f0f7ff;border-radius:16px;text-align:center;margin:1rem 0;}
+.download-btn{display:inline-block;background:#0d6efd;color:white !important;font-weight:600;padding:0.7rem 2rem;border-radius:40px;font-size:1.1rem;box-shadow:0 4px 10px rgba(13,110,253,0.15);transition:0.2s;border:none;text-decoration:none !important;margin:0.2rem 0;}
+.download-btn:hover{background:#0b5ed7;box-shadow:0 6px 14px rgba(13,110,253,0.2);}
+.download-section p{margin-top:0.8rem;color:#4b6584;font-size:0.85rem;}
+.site-footer{background:#1e293b;color:#cbd5e1;padding:1.5rem 0;margin-top:1.5rem;text-align:center;font-size:0.85rem;}
+.site-footer a{color:#9ab3ff;}
+.page-header{margin-bottom:1.5rem;}
+.page-header h1{font-size:1.8rem;font-weight:600;color:#0b2b4a;}
+.archive-description{color:#6c757d;margin-top:0.3rem;font-size:0.95rem;}
+@media(max-width:768px){
+.container{padding:0 12px;}
+.header-inner{flex-direction:column;gap:0.5rem;}
+.main-nav ul{gap:1rem;flex-wrap:wrap;justify-content:center;}
+.site-main{padding:1.2rem 0;}
+.book-grid{grid-template-columns:repeat(2, 1fr);gap:0.9rem;}
+.single-book{padding:1.2rem;}
+.entry-title{font-size:1.6rem;}
+.card-content{padding:0.7rem;}
+.card-title{font-size:1rem;}
+} @media(max-width:480px){
+.book-grid {
+grid-template-columns: 1fr;
+}
+}
