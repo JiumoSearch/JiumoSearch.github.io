@@ -220,7 +220,7 @@
         <div class="container">
             <div class="nav">
                 <a href="#home">首页</a>
-                <a href="#search">搜索</a>
+                <a href="/zhaoshu/">搜索</a>
                 <a href="#books">图书</a>
                 <a href="#about">关于</a>
             </div>
@@ -307,7 +307,8 @@
         function searchBooks() {
             const keyword = document.getElementById('searchInput').value.trim();
             if (keyword) {
-                alert(`正在搜索: ${keyword}\n功能开发中，敬请期待...`);
+                //alert(`正在搜索: ${keyword}\n功能开发中，敬请期待...`);
+                window.location.href = '/search/';
             } else {
                 alert('请输入搜索关键词');
             }
