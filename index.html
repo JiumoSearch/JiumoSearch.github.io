@@ -305,7 +305,12 @@
     
     <script>
         function searchBooks() {
-            window.location.href = '/zhaoshu/';
+            const keyword = document.getElementById('searchInput').value.trim();
+            if (keyword) {
+                window.location.href = '/zhaoshu/?q=' + encodeURIComponent(keyword);
+            } else {
+                window.location.href = '/zhaoshu/';
+            }
         }
         
         // 添加回车键搜索功能
