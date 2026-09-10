@@ -98,6 +98,39 @@
             background: linear-gradient(45deg, #e74c3c, #3498db);
         }
         
+        .hot-books {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .hot-books-label {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .hot-book {
+            display: inline-block;
+            padding: 6px 14px;
+            background-color: #f0f7fb;
+            color: #3498db;
+            border: 1px solid #d6e9f8;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .hot-book:hover {
+            background-color: #3498db;
+            color: #fff;
+            border-color: #3498db;
+        }
+        
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -238,6 +271,19 @@
                 <input type="text" placeholder="输入书名、作者或关键词..." id="searchInput">
                 <button onclick="searchBooks()">搜索</button>
             </div>
+            <div class="hot-books">
+                <span class="hot-books-label">热门书籍：</span>
+                <span class="hot-book" onclick="searchBook('三体')">三体</span>
+                <span class="hot-book" onclick="searchBook('活着')">活着</span>
+                <span class="hot-book" onclick="searchBook('百年孤独')">百年孤独</span>
+                <span class="hot-book" onclick="searchBook('红楼梦')">红楼梦</span>
+                <span class="hot-book" onclick="searchBook('小王子')">小王子</span>
+                <span class="hot-book" onclick="searchBook('平凡的世界')">平凡的世界</span>
+                <span class="hot-book" onclick="searchBook('人类简史')">人类简史</span>
+                <span class="hot-book" onclick="searchBook('围城')">围城</span>
+                <span class="hot-book" onclick="searchBook('白夜行')">白夜行</span>
+                <span class="hot-book" onclick="searchBook('月亮与六便士')">月亮与六便士</span>
+            </div>
             <p>支持搜索：文学、科技、教育、经济、历史、哲学等各类电子书资源</p>
         </div>
         
@@ -307,10 +353,16 @@
         function searchBooks() {
             const keyword = document.getElementById('searchInput').value.trim();
             if (keyword) {
-                window.location.href = '/zhaoshu/?q=' + encodeURIComponent(keyword);
+                window.location.href = 'https://www.teccses.org/?s=' + encodeURIComponent(keyword);
             } else {
-                window.location.href = '/zhaoshu/';
+                window.location.href = 'https://www.teccses.org/?s=%E9%B8%A0%E6%91%A9%E6%90%9C%E4%B9%A6';
             }
+        }
+        
+        // 点击热门书籍名称后自动触发搜索
+        function searchBook(name) {
+            document.getElementById('searchInput').value = name;
+            searchBooks();
         }
         
         // 添加回车键搜索功能
